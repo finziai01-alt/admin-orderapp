@@ -1,5 +1,3 @@
-import Constants from "expo-constants";
-
 const ENV = {
   development: {
     GRAPHQL_URL: "https://tarkari-backend-production.up.railway.app/graphql",
@@ -47,11 +45,10 @@ const ENV = {
   },
 };
 
-const getEnvVars = (env = Constants.manifest?.releaseChannel) => {
-  if (__DEV__) {
+const getEnvVars = () => {
+  const isDev = process.env.NODE_ENV !== 'production';
+  if (isDev) {
     return ENV.development;
-  } else if (env === "production") {
-    return ENV.production;
   } else {
     return ENV.production;
   }
