@@ -3,7 +3,7 @@ import { withTranslation } from 'react-i18next'
 import { Card, CardHeader, CardBody, Row, Col, FormGroup, Input, Label, Form, Button } from 'reactstrap'
 import { withRouter } from 'react-router-dom'
 import { FormControl, FormGroup as FG } from 'react-bootstrap'
-import { getEnvVars } from '../../../../environment'
+import { getEnvVars } from '../../../environment'
 import { connect } from 'react-redux'
 import { Row as RRow } from 'reactstrap'
 
