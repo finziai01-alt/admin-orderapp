@@ -85,8 +85,4 @@ const mapStateToProps = (state) => ({
   stripe: state.stripeReducer,
 })
 
-const mapStateToProps = (state) => ({
-  stripe: state.stripeReducer,
-})
-
 export default withRouter(withTranslation()(connect(mapStateToProps)(Stripe)))
