@@ -4,9 +4,9 @@
   "description": "Enatega dashboard",
   "main": "index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
     "compile-sass": "sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css",
@@ -14,11 +14,11 @@
     "map-sass": "sass src/assets/scss/argon-dashboard-react.scss src/assets/css/argon-dashboard-react.css --source-map",
     "lint:fix": "eslint . --ext .js,.jsx --fix",
     "format": "prettier --write '**/*.{js,jsx}'",
-    "start:staging": "env-cmd -f .env.staging react-scripts start",
-    "start:dev": "PORT=3006 env-cmd -f .env.development react-scripts start",
-    "start:prod": "env-cmd -f .env.production react-scripts start",
-    "build:prod": "env-cmd -f .env.production react-scripts build",
-    "build:staging": "env-cmd -f .env.staging react-scripts build"
+    "start:staging": "env-cmd -f .env.staging craco start",
+    "start:dev": "PORT=3006 env-cmd -f .env.development craco start",
+    "start:prod": "env-cmd -f .env.production craco start",
+    "build:prod": "env-cmd -f .env.production craco build",
+    "build:staging": "env-cmd -f .env.staging craco build"
   },
   "husky": {
     "hooks": {
@@ -90,6 +90,7 @@
     "lint-staged": "^10.2.7",
     "prettier": "2.0.5",
     "prettier-config-standard": "^1.0.1",
-    "typescript": "3.3.3333"
+    "typescript": "3.3.3333",
+    "@craco/craco": "^7.1.0"
   }
 }
