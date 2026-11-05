@@ -2,10 +2,7 @@ import React from 'react'
 import { withTranslation } from 'react-i18next'
 import { Card, CardHeader, CardBody, Row, Col, FormGroup, Input, Label, Form, Button } from 'reactstrap'
 import { withRouter } from 'react-router-dom'
-import { FormControl, FormGroup as FG } from 'react-bootstrap'
-import { getEnvVars } from '../../../environment'
 import { connect } from 'react-redux'
-import { Row as RRow } from 'reactstrap'
 
 const Stripe = ({ t, stripe }) => {
   const { secretKey, publishableKey, secretKeyError, publishableKeyError } = stripe
@@ -88,4 +85,8 @@ const mapStateToProps = (state) => ({
   stripe: state.stripeReducer,
 })
 
-export default withRouter(withTranslation()(Stripe))
+const mapStateToProps = (state) => ({
+  stripe: state.stripeReducer,
+})
+
+export default withRouter(withTranslation()(connect(mapStateToProps)(Stripe)))
