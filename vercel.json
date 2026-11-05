@@ -1,0 +1,13 @@
+{
+  "buildCommand": "npm run build:prod",
+  "devCommand": "npm run start:dev",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "create-react-app",
+  "env": {
+    "NODE_OPTIONS": "--openssl-legacy-provider"
+  },
+  "github": {
+    "enabled": true,
+    "autoAlias": true
+  }
+}
